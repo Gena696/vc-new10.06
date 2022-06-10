@@ -1,0 +1,202 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .body{    
+    padding: calc(20px + (50 - 20) * ((100vw - 320px) / (1200 - 320)));
+    font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1200 - 320)));
+    margin-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1200 - 320)));
+} */
+
+.wrapper{   
+    /* position: relative;  */
+
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    min-height: 100%;
+    text-align: center;     
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(./img/Ring.webp);    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: grid;
+    grid-auto-columns: 135px 3.5fr;
+    grid-template-areas:    "header header"
+                            "nav main "                            
+                            "nav footer";
+                                
+}
+.text1 {
+    padding: 10px;
+    margin: 0 auto;
+    color: rgb(215, 240, 76);
+    font-size: 50px;
+    text-shadow: rgb(215, 240, 76) 8px 8px 8px;
+    letter-spacing: 10px;
+    text-align: center;
+    grid-area: header;
+    text-decoration: underline;
+}
+.text2{    
+    color: rgb(215, 240, 76);
+    font-size: 40px;
+    text-decoration: underline;
+    margin: 0 0 10px 0;
+}
+.text3{    
+    color: rgb(76, 240, 117);
+    font-size: 25px;
+}
+.img1{       
+    justify-content: center;
+    max-width: 350px;
+    max-height: 350px;
+    margin: 0 60px 0 0;
+    border: 3px dashed rgb(215, 240, 76);
+    border-radius: 50%;
+}
+.img2{       
+    max-width: 600px;
+    max-height: 350px;
+    border-radius: 25%;
+    transition: 0.4s;
+       
+}
+.img2:hover{
+    border-radius: 50%; 
+    transition: 0.4s;
+    border: 3px solid rgb(26, 155, 206);    
+}
+.img3{
+    max-width: 600px;
+    max-height: 350px;    
+    border-radius: 35%;
+    border: 3px solid rgb(26, 155, 206);
+    transition: 1.5s;
+}
+.img3:hover{
+    opacity: 0;
+    transition: 1.5s;
+}
+.img4{
+    max-width: 600px;
+    max-height: 350px;
+    border-radius: 35%;
+    border: 3px solid rgb(26, 155, 206);
+    opacity: 0;
+    transition: 1s;
+}
+.img4:hover{
+    opacity: 1;
+    transition: 1s;
+}
+nav .menu{
+    position: relative;
+    grid-area: nav;
+    font-size: 15px;
+    text-align: start;
+    padding: 0 0 0 10px;
+}
+
+ul{  
+    position: fixed;    
+}
+li{
+    display: block;
+    max-width: 140px;
+    margin: 2px;
+}
+nav li:hover{
+    background-color: rgb(28, 20, 139);
+}
+main p{ 
+    display: flex;  
+    justify-content: center;  
+    text-align: justify;   
+    text-indent: 30px;
+    /* text-decoration-color: aqua; */
+    color: rgb(26, 155, 206);
+    padding: 0 10px 20px 10px;
+    font-style: italic;
+    font-size: 30px;
+    grid-area: main; 
+    
+    transition: 0.5s;   
+}
+main p:hover{
+    color: rgb(175, 239, 255);
+    transition: 0.5s;
+}
+p{    
+    text-align: justify;    
+}
+
+ul li{    
+    border: 1px dashed rgb(235, 114, 45);
+}
+    
+a{
+    color: rgb(199, 216, 101);
+}
+.footer{
+    grid-area: footer;
+    background-color: rgb(228, 112, 112);
+    opacity: 0.5;
+}
+.footer_row{
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.conteiner2{
+    display: inline-flex;
+    align-content: space-between;
+    
+}
+    
+
+main a{
+    display: block;
+    margin: -27px 0 15px 0;
+    
+}
+div form input{
+    font-size: 18px;
+    margin: 1px;
+     
+}
+div form input[type="text"]:hover{
+    outline: 5px solid rgb(158, 247, 15);    
+    border-radius: 5px;
+}
+@media (max-width:320px){
+    nav  { display: none; }
+    main { margin: 0 auto; }
+    }
+
+@media (max-width:560px){
+    .img4 { max-width: 200px;
+        max-height: 150px; }
+    .img3 { max-width: 200px;
+        max-height: 150px; }
+    .img2 { max-width: 200px;
+        max-height: 150px; } 
+    .img1 { max-width: 200px;
+        max-height: 150px; }
+    div form input { font-size: 10px; }
+    .text1 { font-size: 30px; } 
+    main p { font-size: 15px; }
+    .text2 { font-size: 25px; }      
+    }
+    
+   
+
+
+
